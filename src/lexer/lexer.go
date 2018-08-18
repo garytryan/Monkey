@@ -106,6 +106,7 @@ func (l *Lexer) NextToken() token.Token {
 
 func (l *Lexer) readIdentifier() string {
 	position := l.position
+
 	for isLetter(l.ch) {
 		l.readChar()
 	}
@@ -114,6 +115,7 @@ func (l *Lexer) readIdentifier() string {
 
 func (l *Lexer) readNumber() string {
 	position := l.position
+
 	for isDigit(l.ch) {
 		l.readChar()
 	}
